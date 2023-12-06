@@ -1,5 +1,9 @@
-.intro{
+body{
+    background-image: url("back_image.jpeg");
+}
+#intro{
     text-align: center;
-    color:crimson;
+}
+.titles{
     text-align: center;
 }
