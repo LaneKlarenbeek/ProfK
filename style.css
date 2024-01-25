@@ -5,16 +5,47 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     opacity: 0.9; /* Adjust the opacity value as needed (0.0 to 1.0) */
-}
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 .titles{
-    color: white;
+    color:black;
     text-align: center;
     width: 30%;
-    background-color: rgb(0 0 0 / 80%);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px 15px 15px 15px;
+    padding:15px;
     justify-content:center;
     margin: auto;
 }
+/* Style for textboxes */
+.textbox {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 0.8 opacity */
+  border-radius: 10px; /* Adjust the border-radius for curved corners */
+  padding: 15px; /* Adjust the padding as needed */
+  color: black; /* Black text color for contrast */
+  text-align: center; /* Center the text within the textbox */
+}
+
+/* Apply the style to paragraphs, h1, and h2 */
+p.textbox, h1.textbox, h2.textbox {
+  /* Inherit styles from .textbox */
+  margin: 10px 0; /* Add margin to create space between textboxes */
+}
+
+.flex-container {
+  margin-left: 200px; /* Adjust this value to match the width of the sidebar */
+  padding: 20px; /* Add padding to the right side of the content */
+}
+
+.litem{
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width:25%;
+  padding: 15px;
+  color: black
+}
+
 #intro{
     background-color: rgb(0 0 0 / 80%);
     color: white;
@@ -35,29 +66,65 @@ body{
 }
 /* Add a black background color to the top navigation */
 .navbar {
-    background-color: #333;
+  /*
     overflow: hidden;
     margin: 2%;
+    height: 100vh; 
+    width: 200px; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    background-color: #e6dcdc; 
+    padding-top: 20px; 
+    box-sizing: border-box;
+    transition: 0.5s;
+    */
+      height: 100vh;
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      padding-top: 20px;
+      box-sizing: border-box;
+      transition: left 0.5s; /* Use left property for transition */
   }
   
   /* Style the links inside the navigation bar */
-  .navbar a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+  .navbar a {  
+    /*
+    padding: 8px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
+    color: #0a0909;
+    display: block;
+    transition: 0.3s;
+    */
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
   }
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #3c3a3a;
+    color: rgb(190, 183, 183);
   }
-  
+  @media screen and (max-width: 600px) {
+    #navbar {
+      width: 100%; /* Make the sidebar full width */
+      height: auto; /* Auto height */
+      position: static; /* Static positioning on smaller screens */
+      padding-top: 0; /* Remove top padding on smaller screens */
+      left: -200px;
+    }
+  }
   /* Add a color to the active/current link */
   .navbar a.active {
-    background-color: #04AA6D;
+    background-color: #383a39;
     color: white;
   }
+  
